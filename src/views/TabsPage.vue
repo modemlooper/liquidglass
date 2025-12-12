@@ -23,6 +23,16 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
 import { ellipse, square, triangle } from 'ionicons/icons';
+
+import { registerTabBarEffect } from '@rdlabo/ionic-theme-ios26';
+onMounted(() => {
+  const tabBar = document.querySelector<HTMLElement>('ion-tab-bar');
+    console.log(tabBar)
+  if (tabBar) {
+    registerTabBarEffect(tabBar);
+  }
+});
 </script>

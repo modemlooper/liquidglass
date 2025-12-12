@@ -34,8 +34,16 @@ import '@ionic/vue/css/palettes/dark.system.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import { isPlatform } from '@ionic/vue';
+import { iosTransitionAnimation, popoverEnterAnimation, popoverLeaveAnimation } from '@rdlabo/ionic-theme-ios26';
+
 const app = createApp(App)
-  .use(IonicVue)
+  .use(IonicVue, {
+    mode: 'ios',
+    navAnimation: isPlatform('ios') ? iosTransitionAnimation : undefined,
+    popoverEnter: isPlatform('ios') ? popoverEnterAnimation : undefined,
+    popoverLeave: isPlatform('ios') ? popoverLeaveAnimation : undefined,
+  })
   .use(router);
 
 router.isReady().then(() => {

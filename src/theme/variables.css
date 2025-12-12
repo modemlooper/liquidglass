@@ -1,2 +1,17 @@
 /* For information on how to create your own theme, please refer to:
 http://ionicframework.com/docs/theming/ */
+
+@import '@rdlabo/ionic-theme-ios26/dist/css/default-variables.css';
+@import '@rdlabo/ionic-theme-ios26/dist/css/ionic-theme-ios26.css';
+
+@import '@rdlabo/ionic-theme-ios26/dist/css/md-remove-ios-class-effect.css';
+
+/* @import '@rdlabo/ionic-theme-ios26/dist/css/ionic-theme-ios26-dark-always.css'; */
+@import '@rdlabo/ionic-theme-ios26/dist/css/ionic-theme-ios26-dark-system.css';
+/* @import '@rdlabo/ionic-theme-ios26/dist/css/ionic-theme-ios26-dark-class.css'; */
+
+
+ion-tab-bar.ios:not(.ios26-disabled) {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
