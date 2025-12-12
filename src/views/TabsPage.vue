@@ -30,7 +30,6 @@ import { ellipse, square, triangle } from 'ionicons/icons';
 import { registerTabBarEffect } from '@rdlabo/ionic-theme-ios26';
 onMounted(() => {
   const tabBar = document.querySelector<HTMLElement>('ion-tab-bar');
-    console.log(tabBar)
   if (tabBar) {
     registerTabBarEffect(tabBar);
   }

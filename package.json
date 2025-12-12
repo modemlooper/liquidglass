@@ -10,7 +10,7 @@
     "test:e2e": "cypress run",
     "test:unit": "vitest",
     "lint": "eslint .",
-    "live": "ionic cap run ios -l --external"
+"live": "npm run build && npx cap copy && ionic cap run ios -l --external --target=E398A328-88FA-4767-B530-219C1A78FF30"
   },
   "dependencies": {
     "@capacitor/app": "8.0.0",

@@ -2,6 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button>
+            <ion-icon :icon="menu"></ion-icon>
+          </ion-button>
+        </ion-buttons>
         <ion-title>Tab 3</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -18,6 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonMenuToggle, IonButton, IonIcon } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
+import { menu } from 'ionicons/icons';
 </script>
